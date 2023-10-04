@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <div>
-      <h1>ONLINE BOTTLE SHOP</h1>
+      <h1 style={{ color: "green" }}>ONLINE BOTTLE SHOP</h1>
     </div>
   );
 };

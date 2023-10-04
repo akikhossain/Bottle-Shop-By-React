@@ -1,6 +1,6 @@
 import "./Bottle.css";
 
-const Bottle = ({ bottle }) => {
+const Bottle = ({ bottle, handleAddCart }) => {
   const {
     img,
     name,
@@ -13,16 +13,19 @@ const Bottle = ({ bottle }) => {
     ratingsCount,
   } = bottle;
   return (
-    <div className="bottle">
-      <img src={img} alt="" />
-      <h2>Bottle name: {name} </h2>
-      <h2>Price: ${price}</h2>
-      <h2>Category: {category}</h2>
-      <h2>Seller: {seller}</h2>
-      <h2>Shipping: {shipping}</h2>
-      <h2>Ratings: {ratings}</h2>
-      <h2>RatingsCount: {ratingsCount}</h2>
-      <h2>Quantity: {quantity}</h2>
+    <div>
+      <div className="bottle">
+        <img src={img} alt="" />
+        <h2>Bottle name: {name} </h2>
+        <h2>Price: ${price}</h2>
+        <h2>Category: {category}</h2>
+        <h2>Seller: {seller}</h2>
+        <h2>Shipping: {shipping}</h2>
+        <h2>Ratings: {ratings}</h2>
+        <h2>RatingsCount: {ratingsCount}</h2>
+        <h2>Quantity: {quantity}</h2>
+        <button onClick={() => handleAddCart(bottle)}>PURCHASE</button>
+      </div>
     </div>
   );
 };
